@@ -1,0 +1,54 @@
+You are an expert Frontend React Developer. I need you to create a modern, responsive Single Page Application (SPA) named "Stress Companion".
+The project MUST be scaffolded using Vite + React (JavaScript only).
+Do NOT use TypeScript anywhere in the project.
+
+Tech Stack:
+Framework: React.js with Vite (JavaScript, NOT TypeScript).
+Styling: Tailwind CSS or clean CSS Modules (design should be modern, minimalist, and "Apple-esque").
+Routing: react-router-dom.
+Backend: NONE. Use LocalStorage for all data persistence and React Context for state management.
+
+Core Functionality:
+The app is a stress detection system where users converse with an AI while the system monitors facial expressions and thermal maps.
+
+Specific Requirements and Page Structure:
+
+1. Global Settings:
+Theme: Support Dark, Light, and System Default modes.
+Constraint: The default must be "System Default". The toggle switch must NOT be in the Navbar; it must reside exclusively in the Settings page.
+
+2. Navigation:
+A clean Navbar visible on internal pages (hidden on Landing/Auth).
+Links: Dashboard, History, Profile, Settings.
+
+3. Pages:
+
+Landing Page (Route: /):
+Modern Hero section explaining "AI Stress Detection via Facial and Thermal Analysis".
+"Get Started" button leading to Auth.
+
+Authentication (Route: /auth):
+Tabs for Sign In and Sign Up.
+Standard Email and Password fields.
+"Login with Google" button: Since there is no backend, simulate a successful login (set a dummy token in LocalStorage and redirect to Dashboard).
+
+Dashboard/Session (Route: /session):
+Visuals: A placeholder area for the user's Webcam feed. Overlay a "Thermal Map" simulation (for example, a semi-transparent colorful gradient or heatmap filter) over the video area.
+AI Avatar/Animation: A dynamic waveform or pulsing orb that animates ONLY when the system is "speaking".
+Transcript: A scrollable area showing the conversation history (User vs System) in real-time.
+Controls: Microphone Toggle, End Session button.
+
+History (Route: /history):
+Display a list of previous conversations (fetched from LocalStorage).
+Cards should show: Date, Session Duration, and a calculated "Stress Level" (mock random percentage).
+
+Profile (Route: /profile):
+Standard info (Name, Email, Avatar).
+Personal Data Section: A specific form to collect biometric/personal data required for the algorithm (for example, Age, Gender, Baseline Heart Rate, Medical Conditions).
+
+Settings (Route: /settings):
+Appearance: The Theme Toggle (Dark, Light, System) goes here.
+Audio: Options to change the System Voice.
+
+Deliverables:
+Please provide the full project file structure, the App.js with routing setup, the AuthContext and ThemeContext providers, and the full code for the ConversationSession component (including the animation logic and webcam placeholder).
